@@ -1,0 +1,22 @@
+nav img {
+    width: 50px;
+}
+
+/* .container.custom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px 100px 100px 100px;
+} */
+
+.title {
+    font-size: 40px;
+}
+
+.card img {
+    max-height: 200px;
+}
+
+.collapsed {
+    display: none;
+}
