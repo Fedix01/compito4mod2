@@ -1,5 +1,31 @@
-document.addEventListener("DOMContentLoaded", function () {
+function counter() {
 
+    let totalCards = document.getElementsByClassName("card");
+    let result = [];
+    for (let i = 0; i < totalCards.length; i++) {
+        let total = totalCards[i];
+        result.push(total)
+    }
+    console.log(result)
+    let newEl = document.createElement("span");
+    newEl.innerText = result.length;
+    newEl.style.color = "white";
+    let numCardsParent = document.querySelector(".tot-cards");
+    console.log(numCardsParent);
+    numCardsParent.appendChild(newEl)
+}
+
+function removeCards() {
+    let totCards = document.querySelectorAll(".card");
+    console.log(totCards)
+    totCards.forEach(element => {
+        element.classList.add("collapsed")
+    });
+
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    counter()
     let btn = document.querySelectorAll(".btn-secondary");
     console.log(btn)
     let firstSection = document.querySelectorAll("#firstRow");
@@ -33,4 +59,5 @@ document.addEventListener("DOMContentLoaded", function () {
             element.classList.toggle("collapsed")
         });
     })
+
 })
