@@ -1,5 +1,5 @@
 function counter() {
-
+    // counter of cards in DOM
     let totalCards = document.getElementsByClassName("card");
     let result = [];
     for (let i = 0; i < totalCards.length; i++) {
@@ -49,6 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
     //         })
     //     });
     // });
+
+    // On click sections collapse
     btn[0].addEventListener("click", () => {
         firstSection.forEach(element => {
             element.classList.toggle("collapsed")
@@ -59,5 +61,11 @@ document.addEventListener("DOMContentLoaded", function () {
             element.classList.toggle("collapsed")
         });
     })
-
+    // Dark-Mode
+    let body = document.body;
+    let hour = (new Date).getHours();
+    console.log(hour)
+    if (hour >= 18 || hour <= 6) {
+        body.classList.toggle("dark")
+    }
 })
