@@ -64,8 +64,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // Dark-Mode
     let body = document.body;
     let hour = (new Date).getHours();
+    let week = document.querySelectorAll(".card-custom")
+    let welcome = document.querySelectorAll(".welcome-custom")
     console.log(hour)
     if (hour >= 18 || hour <= 6) {
-        body.classList.toggle("dark")
+        body.classList.toggle("dark");
+        body.classList.toggle("jumbotron2");
+        week.forEach(element => {
+            element.classList.toggle("dark-welcome")
+        });
+        welcome.forEach(element => {
+            element.classList.toggle("dark-welcome")
+        });
     }
 })
